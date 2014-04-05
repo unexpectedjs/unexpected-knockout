@@ -19,7 +19,7 @@ expect({
 });
 ```
 
-<!-- [![Build Status](https://travis-ci.org/sunesimonsen/unexpected-knockout.png?branch=master)](https://travis-ci.org/sunesimonsen/unexpected-knockout) -->
+[![Build Status](https://travis-ci.org/sunesimonsen/unexpected-knockout.png?branch=master)](https://travis-ci.org/sunesimonsen/unexpected-knockout)
 
 [Run the test in the browser](http://sunesimonsen.github.io/unexpected-knockout/test/tests.html)
 
