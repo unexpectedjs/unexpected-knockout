@@ -30,7 +30,7 @@ expect({
 Install it with NPM or add it to your `package.json`:
 
 ```
-$ npm install unexpected unexpected-knockout
+$ npm install knockout unexpected unexpected-knockout
 ```
 
 Then:
