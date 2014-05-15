@@ -20,12 +20,13 @@
   },
   "main": "./lib/unexpected-knockout.js",
   "peerDependencies": {
-    "knockout": "*"
+    "knockout": "*",
+    "unexpected": ">=3.2.0"
   },
   "devDependencies": {
-    "knockout": "~3.1.0",
-    "unexpected": ">=3.1.1",
-    "mocha": "~1.9.0",
+    "knockout": "=3.1.0",
+    "unexpected": "=3.2.0",
+    "mocha": "=1.9.0",
     "mocha-slow-reporter": "*",
     "serve": "*"
   }
