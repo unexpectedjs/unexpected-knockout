@@ -16,7 +16,7 @@
     "url": "https://github.com/sunesimonsen/unexpected-knockout"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "make test"
   },
   "main": "./lib/unexpected-knockout.js",
   "peerDependencies": {
