@@ -17,6 +17,17 @@ describe('unexpected-knockout', function () {
                 foo: ko.observable(42)
             }));
         });
+
+        it('handles circular structures', function () {
+            var x = ko.observable();
+            x({ foo: x });
+            var y = ko.observable();
+            y({ foo: y });
+
+            expect(function () {
+                expect(x, 'to equal', y);
+            }, 'to throw', 'Cannot compare circular structures');
+        });
     });
 
     describe('not to equal', function () {
