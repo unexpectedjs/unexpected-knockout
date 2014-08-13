@@ -75,7 +75,7 @@ describe('unexpected-knockout', function () {
     it('provides custom inspection for observables', function () {
         expect(function () {
             expect(ko.observable(42), 'to equal', ko.observable(24));
-        }, 'to throw', 'expected [Observable 42] to equal [Observable 24]');
+        }, 'to throw', 'expected ko.observable(42) to equal ko.observable(24)');
     });
 
     describe('to be observable', function () {
@@ -98,7 +98,7 @@ describe('unexpected-knockout', function () {
         it('fails if the subject is a Knockout observable', function () {
             expect(function () {
                 expect(ko.observable(42), 'not to be observable');
-            }, 'to throw', 'expected [Observable 42] not to be observable');
+            }, 'to throw', 'expected ko.observable(42) not to be observable');
         });
     });
 });
