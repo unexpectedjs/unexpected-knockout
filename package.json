@@ -21,7 +21,7 @@
   "main": "./lib/unexpected-knockout.js",
   "peerDependencies": {
     "knockout": "*",
-    "unexpected": ">=4.0.0"
+    "unexpected": "4"
   },
   "devDependencies": {
     "knockout": "=3.1.0",
