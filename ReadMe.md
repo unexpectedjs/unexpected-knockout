@@ -1,5 +1,9 @@
 # Unexpected-knockout
 
+![Slam!](images/knockout1.jpg "Slam!")
+![Boom!](images/knockout2.jpg "Boom!")
+![Bang!](images/knockout3.jpg "Bang!")
+
 This module extends the
 [Unexpected](https://github.com/sunesimonsen/unexpected) assertion
 library with integration for [Knockout](http://knockoutjs.org).
