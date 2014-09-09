@@ -2,7 +2,7 @@
 expect.installPlugin(unexpectedKnockout);
 
 describe('unexpected-knockout', function () {
-    describe('to be equal', function () {
+    describe('to equal', function () {
         it('succeeds when the subject and the argument are observables with equal values', function () {
             expect(ko.observable(42), 'to equal', ko.observable(42));
 
