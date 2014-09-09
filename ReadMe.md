@@ -9,7 +9,7 @@ This module extends the
 library with integration for [Knockout](http://knockoutjs.org).
 
 ```js
-expect(ko.observable(42), 'to be equal', ko.observable(42));
+expect(ko.observable(42), 'to equal', ko.observable(42));
 expect(ko.observable(42), 'not to equal', ko.observable(24));
 expect(ko.observable(42), 'to be observable');
 expect(42, 'not to be observable');
@@ -41,13 +41,13 @@ Then:
 
 ```js
 var expect = require('unexpected').clone();
-expect.installPlugin(require('unexpected-knockout));
+expect.installPlugin(require('unexpected-knockout'));
 ```
 
 ### Browser
 
-Include the `unexpected.js` found at the lib directory of this
-repository.
+Include the `unexpected-knockout.js` found at the lib directory of this
+repository after unexpected itself:
 
 ```html
 <!-- Knockout -->
@@ -83,7 +83,7 @@ define(['unexpected', 'unexpected-knockout'], funtion (unexpected, unexpectedKno
 Passes if the subject and the argument are observables with equal values.
 
 ```js
-expect(ko.observable(42), 'to be equal', ko.observable(42));
+expect(ko.observable(42), 'to equal', ko.observable(42));
 
 expect(ko.observable({
     id: '4331241234',
