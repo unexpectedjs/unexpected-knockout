@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "knockout": "=3.1.0",
-    "unexpected": "=5.0.0-beta1",
+    "unexpected": "=5.0.0-beta3",
     "mocha": "=1.9.0",
     "mocha-slow-reporter": "*",
     "serve": "*"
