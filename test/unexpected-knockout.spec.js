@@ -75,7 +75,14 @@ describe('unexpected-knockout', function () {
     it('provides custom inspection for observables', function () {
         expect(function () {
             expect(ko.observable(42), 'to equal', ko.observable(24));
-        }, 'to throw', 'expected ko.observable(42) to equal ko.observable(24)');
+        }, 'to throw',
+               'expected ko.observable(42) to equal ko.observable(24)\n' +
+               "\n" +
+               "Diff:\n" +
+               "\n" +
+               "ko.observable(\n" +
+               "  42 // should be: 24\n" +
+               ")");
     });
 
     describe('to be observable', function () {
