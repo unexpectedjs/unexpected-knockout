@@ -78,10 +78,8 @@ describe('unexpected-knockout', function () {
         }, 'to throw',
                'expected ko.observable(42) to equal ko.observable(24)\n' +
                "\n" +
-               "Diff:\n" +
-               "\n" +
                "ko.observable(\n" +
-               "  42 // should be: 24\n" +
+               "  42 // should be 24\n" +
                ")");
     });
 
