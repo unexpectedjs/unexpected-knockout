@@ -21,11 +21,11 @@
   "main": "./lib/unexpected-knockout.js",
   "peerDependencies": {
     "knockout": "*",
-    "unexpected": "^5.0.0-beta1"
+    "unexpected": "^5.0.0-beta34"
   },
   "devDependencies": {
     "knockout": "=3.1.0",
-    "unexpected": "=5.0.0-beta33",
+    "unexpected": "=5.0.0-beta34",
     "mocha": "=1.9.0",
     "mocha-slow-reporter": "*",
     "serve": "*"
