@@ -13,13 +13,21 @@ expect(ko.observable(42), 'to equal', ko.observable(42));
 expect(ko.observable(42), 'not to equal', ko.observable(24));
 expect(ko.observable(42), 'to be observable');
 expect(42, 'not to be observable');
+expect(ko.observable(42), 'not to be computed');
+expect(ko.computed(function () { return 42 }, 'to be computed');
 expect({
     foo: ko.observable(42),
     bar: ko.observable(42),
-    baz: 42
+    baz: 42,
+    qux: ko.computed(function () {
+        return 42;
+    })
 }, 'to have properties', {
     foo: ko.observable(42),
-    baz: 42
+    baz: 42,
+    qux: ko.computed(function () {
+        return 42;
+    })
 });
 ```
 
@@ -80,7 +88,8 @@ define(['unexpected', 'unexpected-knockout'], funtion (unexpected, unexpectedKno
 
 ### to equal
 
-Passes if the subject and the argument are observables with equal values.
+Passes if the subject and the argument are observables or computed
+with equal values.
 
 ```js
 expect(ko.observable(42), 'to equal', ko.observable(42));
@@ -93,6 +102,16 @@ expect(ko.observable({
     id: '4331241234',
     name: ko.observable('test'),
     age: ko.observable(42)
+}));
+
+expect(ko.computed(function () {
+    return {
+        foo: ko.observable(42)
+    }
+})), 'to equal', ko.computed(function () {
+    return {
+        foo: ko.observable(42)
+    }
 }));
 ```
 
@@ -118,6 +137,10 @@ expect(ko.observable({
 }), 'not to equal', ko.observable({
     bar: ko.observable(42)
 }));
+
+expect(ko.computed(function () {
+    return 42;
+})), 'not to equal', ko.observable(42));
 ```
 
 ### to be observable
@@ -134,4 +157,22 @@ Passes if the subject is not a Knockout observable.
 
 ```js
 expect(42, 'not to be observable');
+```
+
+### to be computed
+
+Passes if the subject is a Knockout observable.
+
+```js
+expect(ko.computed(function () {
+    return 42;
+}), 'to be observable');
+```
+
+### not to be computed
+
+Passes if the subject is not a Knockout observable.
+
+```js
+expect(ko.observable(42), 'not to be observable');
 ```
