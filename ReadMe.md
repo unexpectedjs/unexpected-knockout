@@ -14,7 +14,7 @@ expect(ko.observable(42), 'not to equal', ko.observable(24));
 expect(ko.observable(42), 'to be observable');
 expect(42, 'not to be observable');
 expect(ko.observable(42), 'not to be computed');
-expect(ko.computed(function () { return 42 }, 'to be computed');
+expect(ko.computed(function () { return 42 }), 'to be computed');
 expect({
     foo: ko.observable(42),
     bar: ko.observable(42),
