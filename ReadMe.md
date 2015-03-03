@@ -5,7 +5,7 @@
 ![Bang!](images/knockout3.jpg "Bang!")
 
 This module extends the
-[Unexpected](https://github.com/sunesimonsen/unexpected) assertion
+[Unexpected](https://github.com/unexpectedjs/unexpected) assertion
 library with integration for [Knockout](http://knockoutjs.org).
 
 ```js
@@ -31,9 +31,9 @@ expect({
 });
 ```
 
-[![Build Status](https://travis-ci.org/sunesimonsen/unexpected-knockout.png?branch=master)](https://travis-ci.org/sunesimonsen/unexpected-knockout)
+[![Build Status](https://travis-ci.org/unexpectedjs/unexpected-knockout.png?branch=master)](https://travis-ci.org/unexpectedjs/unexpected-knockout)
 
-[Run the test in the browser](http://sunesimonsen.github.io/unexpected-knockout/test/tests.html)
+[Run the test in the browser](http://unexpectedjs.github.io/unexpected-knockout/test/tests.html)
 
 ## How to use
 
