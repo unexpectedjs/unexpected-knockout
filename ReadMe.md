@@ -31,9 +31,7 @@ expect({
 });
 ```
 
-[![Build Status](https://travis-ci.org/unexpectedjs/unexpected-knockout.png?branch=master)](https://travis-ci.org/unexpectedjs/unexpected-knockout)
-
-[Run the test in the browser](http://unexpectedjs.github.io/unexpected-knockout/test/tests.html)
+[![Build Status](https://travis-ci.org/unexpectedjs/unexpected-knockout.svg)](https://travis-ci.org/unexpectedjs/unexpected-knockout)
 
 ## How to use
 
