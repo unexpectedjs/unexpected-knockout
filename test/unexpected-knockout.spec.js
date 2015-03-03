@@ -49,7 +49,7 @@ describe('unexpected-knockout', function () {
                    "expected ko.computed(ko.computed(42)) to equal ko.computed(ko.computed(24))\n" +
                    "\n" +
                    "ko.computed(ko.computed(\n" +
-                   "  42 // should be 24\n" +
+                   "  42 // should equal 24\n" +
                    "))");
 
             expect(function () {
@@ -58,7 +58,7 @@ describe('unexpected-knockout', function () {
                    "expected ko.observable(ko.observable(42)) to equal ko.observable(ko.observable(24))\n" +
                    "\n" +
                    "ko.observable(ko.observable(\n" +
-                   "  42 // should be 24\n" +
+                   "  42 // should equal 24\n" +
                    "))");
         });
 
@@ -167,7 +167,7 @@ describe('unexpected-knockout', function () {
                'expected ko.observable(42) to equal ko.observable(24)\n' +
                "\n" +
                "ko.observable(\n" +
-               "  42 // should be 24\n" +
+               "  42 // should equal 24\n" +
                ")");
     });
 
