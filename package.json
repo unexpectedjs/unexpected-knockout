@@ -16,7 +16,9 @@
     "url": "https://github.com/unexpectedjs/unexpected-knockout"
   },
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "generate-site": "node ./generate-site.js",
+    "update-examples": "node ./generate-site.js --update-examples"
   },
   "main": "./lib/unexpected-knockout.js",
   "peerDependencies": {
@@ -25,9 +27,11 @@
   },
   "devDependencies": {
     "knockout": "=3.1.0",
-    "unexpected": "=6.0.0",
+    "minimist": "1.1.1",
     "mocha": "=1.9.0",
     "mocha-slow-reporter": "*",
-    "serve": "*"
+    "serve": "*",
+    "unexpected": "7.0.5",
+    "unexpected-documentation-site-generator": "2.0.0"
   }
 }

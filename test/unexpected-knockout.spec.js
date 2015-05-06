@@ -1,5 +1,5 @@
-/*global describe, it, ko, expect, unexpectedKnockout*/
-expect.installPlugin(unexpectedKnockout);
+/*global describe, it, ko, unexpected*/
+var expect = unexpected.clone();
 
 describe('unexpected-knockout', function () {
     describe('to equal', function () {
