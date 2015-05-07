@@ -32,6 +32,6 @@
     "mocha-slow-reporter": "*",
     "serve": "*",
     "unexpected": "7.0.5",
-    "unexpected-documentation-site-generator": "2.2.0"
+    "unexpected-documentation-site-generator": "2.2.1"
   }
 }
