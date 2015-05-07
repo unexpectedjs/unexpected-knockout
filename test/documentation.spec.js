@@ -168,6 +168,58 @@ describe("documentation tests", function () {
         return expect.promise.all(testPromises);
     });
 
+    it("assertions/wrapperObject/to-satisfy.md contains correct examples", function () {
+        var testPromises = [];
+        expect(ko.observable({
+            id: '4331241234',
+            name: ko.observable('test'),
+            age: ko.observable(42)
+        }), 'to satisfy', {
+            id: '4331241234',
+            name: 'test',
+            age: 42
+        });
+
+        try {
+            expect(ko.observable({
+                id: '4331241234',
+                name: ko.observable('test'),
+                age: ko.observable(42),
+            }), 'to satisfy', {
+                id: '4331241234',
+                name: 'hest',
+                age: 41
+            });
+            expect.fail(function (output) {
+                output.error("expected:").nl();
+                output.code("expect(ko.observable({").nl();
+                output.code("    id: '4331241234',").nl();
+                output.code("    name: ko.observable('test'),").nl();
+                output.code("    age: ko.observable(42),").nl();
+                output.code("}), 'to satisfy', {").nl();
+                output.code("    id: '4331241234',").nl();
+                output.code("    name: 'hest',").nl();
+                output.code("    age: 41").nl();
+                output.code("});").nl();
+                output.error("to throw");
+            });
+        } catch (e) {
+            expect(e, "to have message",
+                "expected ko.observable({ id: '4331241234', name: ko.observable('test'), age: ko.observable(42) })\n" +
+                "to satisfy { id: '4331241234', name: 'hest', age: 41 }\n" +
+                "\n" +
+                "ko.observable({\n" +
+                "  id: '4331241234',\n" +
+                "  name: ko.observable('test'), // should satisfy 'hest'\n" +
+                "                               // -test\n" +
+                "                               // +hest\n" +
+                "  age: ko.observable(42) // should satisfy 41\n" +
+                "})"
+            );
+        }
+        return expect.promise.all(testPromises);
+    });
+
     it("index.md contains correct examples", function () {
         var testPromises = [];
         expect(ko.observable(42), 'to equal', ko.observable(42));
