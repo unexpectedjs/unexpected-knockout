@@ -1,0 +1,18 @@
+[
+  {
+    "label": "to equal (any)",
+    "url": "/assertions/any/to-equal/"
+  },
+  {
+    "label": "to be computed (knockout-computed)",
+    "url": "/assertions/knockout-computed/to-be-computed/"
+  },
+  {
+    "label": "to be observable (knockout-observable)",
+    "url": "/assertions/knockout-observable/to-be-observable/"
+  },
+  {
+    "label": "to satisfy (wrapperObject)",
+    "url": "/assertions/wrapperObject/to-satisfy/"
+  }
+]
