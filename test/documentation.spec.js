@@ -134,6 +134,33 @@ describe("documentation tests", function () {
         return expect.promise.all(testPromises);
     });
 
+    it("assertions/knockout-computed/to-satisfy.md contains correct examples", function () {
+        var testPromises = [];
+        try {
+            expect(ko.computed(function () {
+              return { foo: 'f00!' };
+            }), 'to satisfy', { foo: 'foo' });
+            expect.fail(function (output) {
+                output.error("expected:").nl();
+                output.code("expect(ko.computed(function () {").nl();
+                output.code("  return { foo: 'f00!' };").nl();
+                output.code("}), 'to satisfy', { foo: 'foo' });").nl();
+                output.error("to throw");
+            });
+        } catch (e) {
+            expect(e, "to have message",
+                "expected ko.computed({ foo: 'f00!' }) to satisfy { foo: 'foo' }\n" +
+                "\n" +
+                "ko.computed({\n" +
+                "  foo: 'f00!' // should equal 'foo'\n" +
+                "              // -f00!\n" +
+                "              // +foo\n" +
+                "})"
+            );
+        }
+        return expect.promise.all(testPromises);
+    });
+
     it("assertions/knockout-observable/to-be-observable.md contains correct examples", function () {
         var testPromises = [];
         expect(ko.observable(42), 'to be observable');
@@ -163,6 +190,32 @@ describe("documentation tests", function () {
         } catch (e) {
             expect(e, "to have message",
                 "expected ko.observable(42) not to be observable"
+            );
+        }
+        return expect.promise.all(testPromises);
+    });
+
+    it("assertions/knockout-observable/to-satisfy.md contains correct examples", function () {
+        var testPromises = [];
+        try {
+            expect(ko.observable({ foo: 'f00!' }), 'to satisfy', {
+              foo: expect.it('to have length', 3)
+            });
+            expect.fail(function (output) {
+                output.error("expected:").nl();
+                output.code("expect(ko.observable({ foo: 'f00!' }), 'to satisfy', {").nl();
+                output.code("  foo: expect.it('to have length', 3)").nl();
+                output.code("});").nl();
+                output.error("to throw");
+            });
+        } catch (e) {
+            expect(e, "to have message",
+                "expected ko.observable({ foo: 'f00!' }) to satisfy { foo: expect.it('to have length', 3) }\n" +
+                "\n" +
+                "ko.observable({\n" +
+                "  foo: 'f00!' // expected 'f00!' to have length 3\n" +
+                "              //   expected 4 to be 3\n" +
+                "})"
             );
         }
         return expect.promise.all(testPromises);
