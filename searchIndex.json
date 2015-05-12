@@ -4,12 +4,20 @@
     "url": "/assertions/any/to-equal/"
   },
   {
+    "label": "to be computed (knockout-computed)",
+    "url": "/assertions/knockout-computed/to-be-computed/"
+  },
+  {
+    "label": "to satisfy (knockout-computed)",
+    "url": "/assertions/knockout-computed/to-satisfy/"
+  },
+  {
     "label": "to be observable (knockout-observable)",
     "url": "/assertions/knockout-observable/to-be-observable/"
   },
   {
-    "label": "to be computed (knockout-computed)",
-    "url": "/assertions/knockout-computed/to-be-computed/"
+    "label": "to satisfy (knockout-observable)",
+    "url": "/assertions/knockout-observable/to-satisfy/"
   },
   {
     "label": "to satisfy (wrapperObject)",
