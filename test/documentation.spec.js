@@ -263,10 +263,10 @@ describe("documentation tests", function () {
                 "\n" +
                 "ko.observable({\n" +
                 "  id: '4331241234',\n" +
-                "  name: ko.observable('test'), // should satisfy 'hest'\n" +
+                "  name: ko.observable('test'), // should equal 'hest'\n" +
                 "                               // -test\n" +
                 "                               // +hest\n" +
-                "  age: ko.observable(42) // should satisfy 41\n" +
+                "  age: ko.observable(42) // should equal 41\n" +
                 "})"
             );
         }
