@@ -24,6 +24,7 @@
                 <li class="active"><a href="../../any/to-equal">Assertions</a></li>
                 
                 
+                
             </ul>
         </nav>
         <div class="search" style="visibility: hidden">
@@ -95,6 +96,7 @@
 
     <div class="main" tabindex="-1">
         <div class="content">
+            <h1>to satisfy</h1>
             <p>Asserts that a observable value matches a given specification.</p>
 <p>For more information see the documentation for
 <a href="http://unexpectedjs.github.io/assertions/any/to-satisfy/">to satisfy</a>.</p>
@@ -103,7 +105,8 @@
   <div>&nbsp;&nbsp;foo<span style="color: #000000">:</span>&nbsp;expect<span style="color: #000000">.</span><span style="color: #000000">it</span><span style="color: #000000">(</span><span style="color: #df5000">'to&nbsp;have&nbsp;length'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">3</span><span style="color: #000000">)</span></div>
   <div><span style="color: #000000">});</span></div>
 </div><div class="output">
-  <div><span style="color: red; font-weight: bold">expected</span>&nbsp;ko.observable({&nbsp;<span style="color: #555">foo</span>:&nbsp;<span style="color: #df5000">'f00!'</span>&nbsp;})&nbsp;<span style="color: red; font-weight: bold">to&nbsp;satisfy</span>&nbsp;{&nbsp;<span style="color: #555">foo</span>:&nbsp;<div style="display: inline-block; vertical-align: top">
+  <div><span style="color: red; font-weight: bold">expected</span>&nbsp;ko.observable({&nbsp;<span style="color: #555">foo</span>:&nbsp;<span style="color: #df5000">'f00!'</span>&nbsp;})</div>
+  <div><span style="color: red; font-weight: bold">to&nbsp;satisfy</span>&nbsp;{&nbsp;<span style="color: #555">foo</span>:&nbsp;<div style="display: inline-block; vertical-align: top">
   <div>expect.it(<span style="color: #df5000">'to&nbsp;have&nbsp;length'</span>,&nbsp;<span style="color: #0086b3">3</span>)</div>
 </div>&nbsp;}</div>
   <div>&nbsp;</div>
@@ -116,7 +119,7 @@
   <div><span style="color: red; font-weight: bold">//</span></div>
 </div>&nbsp;<div style="display: inline-block; vertical-align: top">
   <div><div style="display: inline-block; vertical-align: top">
-  <div><span style="color: red; font-weight: bold">expected</span>&nbsp;<span style="color: #df5000">'f00!'</span>&nbsp;<span style="color: red; font-weight: bold">to&nbsp;have&nbsp;length</span>&nbsp;<span style="color: #0086b3">3</span></div>
+  <div><span style="color: red; font-weight: bold">should&nbsp;have&nbsp;length</span>&nbsp;<span style="color: #0086b3">3</span></div>
   <div>&nbsp;&nbsp;<div style="display: inline-block; vertical-align: top">
   <div><span style="color: red; font-weight: bold">expected</span>&nbsp;<span style="color: #0086b3">4</span>&nbsp;<span style="color: red; font-weight: bold">to&nbsp;be</span>&nbsp;<span style="color: #0086b3">3</span></div>
 </div></div>
