@@ -10,10 +10,11 @@ expect(ko.observable({ foo: 'f00!' }), 'to satisfy', {
 ```
 
 ```output
-expected ko.observable({ foo: 'f00!' }) to satisfy { foo: expect.it('to have length', 3) }
+expected ko.observable({ foo: 'f00!' })
+to satisfy { foo: expect.it('to have length', 3) }
 
 ko.observable({
-  foo: 'f00!' // expected 'f00!' to have length 3
+  foo: 'f00!' // should have length 3
               //   expected 4 to be 3
 })
 ```

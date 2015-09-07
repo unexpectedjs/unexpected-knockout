@@ -210,10 +210,11 @@ describe("documentation tests", function () {
             });
         } catch (e) {
             expect(e, "to have message",
-                "expected ko.observable({ foo: 'f00!' }) to satisfy { foo: expect.it('to have length', 3) }\n" +
+                "expected ko.observable({ foo: 'f00!' })\n" +
+                "to satisfy { foo: expect.it('to have length', 3) }\n" +
                 "\n" +
                 "ko.observable({\n" +
-                "  foo: 'f00!' // expected 'f00!' to have length 3\n" +
+                "  foo: 'f00!' // should have length 3\n" +
                 "              //   expected 4 to be 3\n" +
                 "})"
             );
