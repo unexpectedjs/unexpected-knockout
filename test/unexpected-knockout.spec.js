@@ -2,6 +2,8 @@
 var expect = unexpected.clone();
 
 describe('unexpected-knockout', function () {
+    expect.output.preferredWidth = 150;
+
     describe('to equal', function () {
         it('succeeds when the subject and the argument are observables with equal values', function () {
             expect(ko.observable(42), 'to equal', ko.observable(42));
