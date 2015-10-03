@@ -23,7 +23,7 @@
   "main": "./lib/unexpected-knockout.js",
   "peerDependencies": {
     "knockout": "*",
-    "unexpected": "5 || 6 || 7 || 8 || 9"
+    "unexpected": "5 || 6 || 7 || 8 || 9 || 10"
   },
   "devDependencies": {
     "knockout": "=3.1.0",
