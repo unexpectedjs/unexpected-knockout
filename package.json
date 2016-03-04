@@ -28,10 +28,10 @@
   "devDependencies": {
     "knockout": "=3.1.0",
     "minimist": "1.1.1",
-    "mocha": "=1.9.0",
+    "mocha": "2.4.5",
     "mocha-slow-reporter": "*",
     "serve": "*",
-    "unexpected": "9.11.1",
+    "unexpected": "10.10.0",
     "unexpected-documentation-site-generator": "2.9.2"
   }
 }
