@@ -17,8 +17,8 @@
   },
   "scripts": {
     "test": "make test",
-    "generate-site": "node ./generate-site.js",
-    "update-examples": "node ./generate-site.js --update-examples"
+    "generate-site": "generate-site --require ./bootstrap-unexpected-markdown.js",
+    "update-examples": "generate-site --require ./bootstrap-unexpected-markdown.js --update-examples"
   },
   "main": "./lib/unexpected-knockout.js",
   "peerDependencies": {
@@ -32,6 +32,6 @@
     "mocha-slow-reporter": "*",
     "serve": "*",
     "unexpected": "10.10.0",
-    "unexpected-documentation-site-generator": "2.9.2"
+    "unexpected-documentation-site-generator": "4.0.0"
   }
 }
