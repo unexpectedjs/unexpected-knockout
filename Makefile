@@ -2,9 +2,8 @@ REPORTER = dot
 
 test:
 	@./node_modules/.bin/mocha \
-		--require ./test/common \
-		--reporter $(REPORTER) \
-		test/unexpected-knockout.spec.js
+		./documentation/**/*.md \
+		./test/**/*.js
 
 .PHONY: test
 
@@ -13,7 +12,10 @@ coverage:
 	@jscoverage lib lib-cov
 	@COVERAGE=1 ./node_modules/.bin/mocha \
         --require ./test/common \
-        --reporter html-cov > lib-cov/index.html
+        --reporter html-cov \
+				./documentation/**/*.md \
+				./test/**/*.js \
+				> lib-cov/index.html
 	@echo "Coverage report has been generated to lib-cov/index.html"
 
 .PHONY: coverage

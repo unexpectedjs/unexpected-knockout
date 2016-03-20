@@ -36,6 +36,7 @@ expected ko.observable('f00') to equal ko.observable('foo')
 
 ko.observable(
   'f00' // should equal 'foo'
+        //
         // -f00
         // +foo
 )

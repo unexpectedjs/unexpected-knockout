@@ -14,6 +14,7 @@ expected ko.computed({ foo: 'f00!' }) to satisfy { foo: 'foo' }
 
 ko.computed({
   foo: 'f00!' // should equal 'foo'
+              //
               // -f00!
               // +foo
 })

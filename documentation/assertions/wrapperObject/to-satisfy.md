@@ -36,6 +36,7 @@ to satisfy { id: '4331241234', name: 'hest', age: 41 }
 ko.observable({
   id: '4331241234',
   name: ko.observable('test'), // should equal 'hest'
+                               //
                                // -test
                                // +hest
   age: ko.observable(42) // should equal 41
