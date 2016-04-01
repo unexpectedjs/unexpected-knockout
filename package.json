@@ -33,6 +33,6 @@
     "serve": "*",
     "unexpected": "10.10.0",
     "unexpected-documentation-site-generator": "^4.0.0",
-    "unexpected-markdown": "^1.3.2"
+    "unexpected-markdown": "^1.4.0"
   }
 }
