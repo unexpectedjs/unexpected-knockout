@@ -37,66 +37,65 @@
 
 <section id="assertions">
     <nav id="assertion-menu" class="sidebar js-remember-scroll-position">
-    <ul>
-        
-        <li>
-            <h3>any</h3>
-            <ul>
-                
-                <li class="">
-                    <a href="../../any/to-equal">to equal</a>
-                </li>
-                
-            </ul>
-        </li>
-        
-        <li>
-            <h3>wrapperObject</h3>
-            <ul>
-                
-                <li class="active">
-                    <a href="">to satisfy</a>
-                </li>
-                
-            </ul>
-        </li>
-        
-        <li>
-            <h3>knockout-observable</h3>
-            <ul>
-                
-                <li class="">
-                    <a href="../../knockout-observable/to-be-observable">to be observable</a>
-                </li>
-                
-                <li class="">
-                    <a href="../../knockout-observable/to-satisfy">to satisfy</a>
-                </li>
-                
-            </ul>
-        </li>
-        
-        <li>
-            <h3>knockout-computed</h3>
-            <ul>
-                
-                <li class="">
-                    <a href="../../knockout-computed/to-be-computed">to be computed</a>
-                </li>
-                
-                <li class="">
-                    <a href="../../knockout-computed/to-satisfy">to satisfy</a>
-                </li>
-                
-            </ul>
-        </li>
-        
-    </ul>
+    
+        <h3 class=""><a href="../../any">any</a></h3>
+        <ul>
+            
+            <li class="">
+                <a href="../../any/to-equal">to equal</a>
+            </li>
+            
+        </ul>
+    
+        <h3 class=""><a href="..">wrapperObject</a></h3>
+        <ul>
+            
+            <li class="active">
+                <a href="">to satisfy</a>
+            </li>
+            
+        </ul>
+    
+        <h3 class=""><a href="../../knockout-observable">knockout-observable</a></h3>
+        <ul>
+            
+            <li class="">
+                <a href="../../knockout-observable/to-be-observable">to be observable</a>
+            </li>
+            
+            <li class="">
+                <a href="../../knockout-observable/to-satisfy">to satisfy</a>
+            </li>
+            
+        </ul>
+    
+        <h3 class=""><a href="../../knockout-computed">knockout-computed</a></h3>
+        <ul>
+            
+            <li class="">
+                <a href="../../knockout-computed/to-be-computed">to be computed</a>
+            </li>
+            
+            <li class="">
+                <a href="../../knockout-computed/to-satisfy">to satisfy</a>
+            </li>
+            
+        </ul>
+    
 </nav>
 
     <div class="main" tabindex="-1">
         <div class="content">
             <h1>to satisfy</h1>
+            
+                <ul class="declarations">
+                
+                    <li>&lt;wrapperObject&gt; to [exhaustively] satisfy &lt;wrapperObject&gt;</li>
+                
+                    <li>&lt;wrapperObject&gt; to [exhaustively] satisfy &lt;any&gt;</li>
+                
+                </ul>
+            
             <p>As the types for knockout observables and computeds both inherit from
 wrapperObject they support
 <a href="http://unexpectedjs.github.io/assertions/any/to-satisfy/">to satisfy</a>
@@ -132,8 +131,8 @@ on the content of the observables:</p>
 </div></div>
   <div>&nbsp;&nbsp;<div style="display: inline-block; vertical-align: top">
   <div><span style="color: #555">name</span>:&nbsp;<div style="display: inline-block; vertical-align: top">
-  <div>ko.observable(<span style="color: #df5000">'test'</span>),</div>
-</div>&nbsp;<div style="display: inline-block; vertical-align: top">
+  <div>ko.observable(<span style="color: #df5000">'test'</span>),&nbsp;<div style="display: inline-block; vertical-align: top">
+  <div><span style="color: red; font-weight: bold">//</span></div>
   <div><span style="color: red; font-weight: bold">//</span></div>
   <div><span style="color: red; font-weight: bold">//</span></div>
   <div><span style="color: red; font-weight: bold">//</span></div>
@@ -141,14 +140,8 @@ on the content of the observables:</p>
   <div><span style="color: red; font-weight: bold">should&nbsp;equal</span>&nbsp;<div style="display: inline-block; vertical-align: top">
   <div><span style="color: #df5000">'hest'</span></div>
 </div></div>
-  <div><div style="display: inline-block; vertical-align: top">
-  <div><span style="color: red">-</span></div>
-</div><div style="display: inline-block; vertical-align: top">
+  <div>&nbsp;</div>
   <div><span style="background-color: red; color: white">test</span></div>
-</div></div>
-  <div><div style="display: inline-block; vertical-align: top">
-  <div><span style="color: green">+</span></div>
-</div><div style="display: inline-block; vertical-align: top">
   <div><span style="background-color: green; color: white">hest</span></div>
 </div></div>
 </div></div>

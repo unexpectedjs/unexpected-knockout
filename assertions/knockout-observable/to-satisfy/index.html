@@ -37,66 +37,57 @@
 
 <section id="assertions">
     <nav id="assertion-menu" class="sidebar js-remember-scroll-position">
-    <ul>
-        
-        <li>
-            <h3>any</h3>
-            <ul>
-                
-                <li class="">
-                    <a href="../../any/to-equal">to equal</a>
-                </li>
-                
-            </ul>
-        </li>
-        
-        <li>
-            <h3>wrapperObject</h3>
-            <ul>
-                
-                <li class="">
-                    <a href="../../wrapperObject/to-satisfy">to satisfy</a>
-                </li>
-                
-            </ul>
-        </li>
-        
-        <li>
-            <h3>knockout-observable</h3>
-            <ul>
-                
-                <li class="">
-                    <a href="../to-be-observable">to be observable</a>
-                </li>
-                
-                <li class="active">
-                    <a href="">to satisfy</a>
-                </li>
-                
-            </ul>
-        </li>
-        
-        <li>
-            <h3>knockout-computed</h3>
-            <ul>
-                
-                <li class="">
-                    <a href="../../knockout-computed/to-be-computed">to be computed</a>
-                </li>
-                
-                <li class="">
-                    <a href="../../knockout-computed/to-satisfy">to satisfy</a>
-                </li>
-                
-            </ul>
-        </li>
-        
-    </ul>
+    
+        <h3 class=""><a href="../../any">any</a></h3>
+        <ul>
+            
+            <li class="">
+                <a href="../../any/to-equal">to equal</a>
+            </li>
+            
+        </ul>
+    
+        <h3 class=""><a href="../../wrapperObject">wrapperObject</a></h3>
+        <ul>
+            
+            <li class="">
+                <a href="../../wrapperObject/to-satisfy">to satisfy</a>
+            </li>
+            
+        </ul>
+    
+        <h3 class=""><a href="..">knockout-observable</a></h3>
+        <ul>
+            
+            <li class="">
+                <a href="../to-be-observable">to be observable</a>
+            </li>
+            
+            <li class="active">
+                <a href="">to satisfy</a>
+            </li>
+            
+        </ul>
+    
+        <h3 class=""><a href="../../knockout-computed">knockout-computed</a></h3>
+        <ul>
+            
+            <li class="">
+                <a href="../../knockout-computed/to-be-computed">to be computed</a>
+            </li>
+            
+            <li class="">
+                <a href="../../knockout-computed/to-satisfy">to satisfy</a>
+            </li>
+            
+        </ul>
+    
 </nav>
 
     <div class="main" tabindex="-1">
         <div class="content">
             <h1>to satisfy</h1>
+            
             <p>Asserts that a observable value matches a given specification.</p>
 <p>For more information see the documentation for
 <a href="http://unexpectedjs.github.io/assertions/any/to-satisfy/">to satisfy</a>.</p>
@@ -113,8 +104,7 @@
   <div>ko.observable({</div>
   <div>&nbsp;&nbsp;<div style="display: inline-block; vertical-align: top">
   <div><span style="color: #555">foo</span>:&nbsp;<div style="display: inline-block; vertical-align: top">
-  <div><span style="color: #df5000">'f00!'</span></div>
-</div>&nbsp;<div style="display: inline-block; vertical-align: top">
+  <div><span style="color: #df5000">'f00!'</span>&nbsp;<div style="display: inline-block; vertical-align: top">
   <div><span style="color: red; font-weight: bold">//</span></div>
   <div><span style="color: red; font-weight: bold">//</span></div>
 </div>&nbsp;<div style="display: inline-block; vertical-align: top">
@@ -122,6 +112,7 @@
   <div><span style="color: red; font-weight: bold">should&nbsp;have&nbsp;length</span>&nbsp;<span style="color: #0086b3">3</span></div>
   <div>&nbsp;&nbsp;<div style="display: inline-block; vertical-align: top">
   <div><span style="color: red; font-weight: bold">expected</span>&nbsp;<span style="color: #0086b3">4</span>&nbsp;<span style="color: red; font-weight: bold">to&nbsp;be</span>&nbsp;<span style="color: #0086b3">3</span></div>
+</div></div>
 </div></div>
 </div></div>
 </div></div>
