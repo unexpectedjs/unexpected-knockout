@@ -1,3 +1,5 @@
+/* global unexpected:true , ko:true, unexpectedKnockout:true */
+/* exported ko */
 ko = require('knockout');
 unexpectedKnockout = process.env.COVERAGE ?
     require('../lib-cov/unexpected-knockout') :
