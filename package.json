@@ -29,7 +29,7 @@
   "devDependencies": {
     "eslint": "2.13.1",
     "eslint-config-onelint": "1.2.0",
-    "knockout": "=3.1.0",
+    "knockout": "=3.4.2",
     "minimist": "1.1.1",
     "mocha": "2.4.5",
     "mocha-slow-reporter": "*",
