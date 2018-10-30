@@ -30,7 +30,7 @@
     "eslint": "2.13.1",
     "eslint-config-onelint": "1.2.0",
     "knockout": "=3.1.0",
-    "minimist": "1.1.1",
+    "minimist": "1.2.0",
     "mocha": "2.4.5",
     "mocha-slow-reporter": "*",
     "serve": "*",
