@@ -27,7 +27,7 @@
     "unexpected": "5 || 6 || 7 || 8 || 9 || 10"
   },
   "devDependencies": {
-    "eslint": "2.13.1",
+    "eslint": "5.11.0",
     "eslint-config-onelint": "1.2.0",
     "knockout": "=3.1.0",
     "minimist": "1.1.1",
