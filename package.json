@@ -24,7 +24,7 @@
   "main": "./lib/unexpected-knockout.js",
   "peerDependencies": {
     "knockout": "*",
-    "unexpected": "5 || 6 || 7 || 8 || 9 || 10"
+    "unexpected": "5 || 6 || 7 || 8 || 9 || 10 || ^11.0.0-4"
   },
   "devDependencies": {
     "eslint": "2.13.1",
@@ -34,7 +34,7 @@
     "mocha": "2.4.5",
     "mocha-slow-reporter": "*",
     "serve": "*",
-    "unexpected": "10.10.0",
+    "unexpected": "11.0.0-4",
     "unexpected-documentation-site-generator": "^4.0.0",
     "unexpected-markdown": "^1.4.0"
   }
