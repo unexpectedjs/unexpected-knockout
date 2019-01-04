@@ -36,6 +36,6 @@
     "serve": "*",
     "unexpected": "11.0.0-4",
     "unexpected-documentation-site-generator": "^5.1.0",
-    "unexpected-markdown": "^1.4.0"
+    "unexpected-markdown": "^2.0.0"
   }
 }
