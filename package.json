@@ -1,6 +1,6 @@
 {
   "name": "unexpected-knockout",
-  "version": "5.3.0",
+  "version": "5.5.0",
   "author": "Sune Sloth Simonsen <sune@we-knowhow.dk>",
   "keywords": [
     "assertion",
@@ -24,17 +24,17 @@
   "main": "./lib/unexpected-knockout.js",
   "peerDependencies": {
     "knockout": "*",
-    "unexpected": "5 || 6 || 7 || 8 || 9 || 10"
+    "unexpected": "5 || 6 || 7 || 8 || 9 || 10 || ^11.0.0-4"
   },
   "devDependencies": {
     "eslint": "2.13.1",
     "eslint-config-onelint": "1.2.0",
-    "knockout": "=3.1.0",
+    "knockout": "=3.4.2",
     "minimist": "1.2.0",
     "mocha": "2.4.5",
     "mocha-slow-reporter": "*",
     "serve": "*",
-    "unexpected": "10.10.0",
+    "unexpected": "11.0.0-4",
     "unexpected-documentation-site-generator": "^4.0.0",
     "unexpected-markdown": "^1.4.0"
   }
