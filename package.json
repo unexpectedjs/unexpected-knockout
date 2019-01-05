@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "eslint": "2.13.1",
-    "eslint-config-onelint": "1.2.0",
+    "eslint-config-onelint": "4.0.0",
     "knockout": "=3.4.2",
     "minimist": "1.2.0",
     "mocha": "2.4.5",
