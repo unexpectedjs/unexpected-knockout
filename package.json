@@ -17,7 +17,9 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "make test && npm run lint",
+    "test": "make test",
+    "ci": "npm test && npm run lint && npm run coverage",
+    "coverage": "NODE_ENV=development nyc --reporter=lcov --reporter=text --all -- npm test && echo google-chrome coverage/lcov-report/index.html",
     "generate-site": "generate-site --require ./bootstrap-unexpected-markdown.js",
     "update-examples": "generate-site --require ./bootstrap-unexpected-markdown.js --update-examples"
   },
@@ -27,15 +29,24 @@
     "unexpected": "5 || 6 || 7 || 8 || 9 || 10 || ^11.0.0-4"
   },
   "devDependencies": {
-    "eslint": "2.13.1",
-    "eslint-config-onelint": "1.2.0",
-    "knockout": "=3.4.2",
-    "minimist": "1.2.0",
-    "mocha": "2.4.5",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.12.0",
+    "eslint-config-pretty-standard": "^2.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "knockout": "^3.4.2",
+    "minimist": "^1.2.0",
+    "mocha": "^5.2.0",
     "mocha-slow-reporter": "*",
+    "nyc": "^13.1.0",
+    "prettier": "^1.15.3",
     "serve": "*",
-    "unexpected": "11.0.0-4",
+    "unexpected": "^11.0.0-4",
     "unexpected-documentation-site-generator": "^5.1.0",
     "unexpected-markdown": "^2.0.0"
+  },
+  "nyc": {
+    "include": [
+      "lib/**"
+    ]
   }
 }
