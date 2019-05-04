@@ -37,7 +37,7 @@
     "minimist": "^1.2.0",
     "mocha": "^5.2.0",
     "mocha-slow-reporter": "*",
-    "nyc": "^13.1.0",
+    "nyc": "^14.1.0",
     "prettier": "^1.15.3",
     "serve": "*",
     "unexpected": "^11.0.0-4",
