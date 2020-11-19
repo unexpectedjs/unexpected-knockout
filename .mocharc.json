@@ -1,0 +1,6 @@
+{
+  "reporter": "spec",
+  "recursive": true,
+  "timeout": 20000,
+  "require": ["./test/common", "unexpected-markdown"]
+}
