@@ -36,7 +36,6 @@
     "knockout": "^3.4.2",
     "minimist": "^1.2.0",
     "mocha": "^6.1.4",
-    "mocha-slow-reporter": "*",
     "nyc": "^14.1.1",
     "prettier": "~1.19.1",
     "serve": "*",
