@@ -1,5 +1,5 @@
-/*global describe, it, ko, unexpected*/
-var expect = unexpected.clone();
+/* global ko, unexpected */
+const expect = unexpected.clone();
 
 describe('unexpected-knockout', function() {
   expect.output.preferredWidth = 150;
@@ -103,9 +103,9 @@ describe('unexpected-knockout', function() {
     });
 
     it('handles circular structures', function() {
-      var x = ko.observable();
+      const x = ko.observable();
       x({ foo: x });
-      var y = ko.observable();
+      const y = ko.observable();
       y({ foo: y });
 
       expect(
@@ -290,16 +290,6 @@ describe('unexpected-knockout', function() {
   describe('not to be observable', function() {
     it('succeeds if subject is not a Knockout observable', function() {
       expect(42, 'not to be observable');
-    });
-
-    it('fails if the subject is a Knockout observable', function() {
-      expect(
-        function() {
-          expect(ko.observable(42), 'not to be observable');
-        },
-        'to throw',
-        'expected ko.observable(42) not to be observable'
-      );
     });
 
     it('fails if the subject is a Knockout observable', function() {
