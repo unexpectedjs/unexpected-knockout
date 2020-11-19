@@ -1,9 +1,12 @@
 Passes if the subject is a Knockout computed.
 
 ```js
-expect(ko.computed(function () {
+expect(
+  ko.computed(function () {
     return 42;
-}), 'to be observable');
+  }),
+  'to be observable'
+);
 ```
 
 In case of a failing expectation you get the following output:
@@ -25,9 +28,12 @@ expect(ko.observable(42), 'not to be computed');
 In case of a failing expectation you get the following output:
 
 ```js
-expect(ko.computed(function () {
+expect(
+  ko.computed(function () {
     return 42;
-}), 'not to be computed');
+  }),
+  'not to be computed'
+);
 ```
 
 ```output

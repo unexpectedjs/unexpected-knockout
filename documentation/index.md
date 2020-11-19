@@ -7,9 +7,9 @@ repository: https://github.com/unexpectedjs/unexpected-knockout
 
 # Unexpected-knockout
 
-![Slam!](images/knockout1.jpg "Slam!")
-![Boom!](images/knockout2.jpg "Boom!")
-![Bang!](images/knockout3.jpg "Bang!")
+![Slam!](images/knockout1.jpg 'Slam!')
+![Boom!](images/knockout2.jpg 'Boom!')
+![Bang!](images/knockout3.jpg 'Bang!')
 
 This module extends the
 [Unexpected](https://github.com/unexpectedjs/unexpected) assertion
@@ -21,21 +21,30 @@ expect(ko.observable(42), 'not to equal', ko.observable(24));
 expect(ko.observable(42), 'to be observable');
 expect(42, 'not to be observable');
 expect(ko.observable(42), 'not to be computed');
-expect(ko.computed(function () { return 42 }), 'to be computed');
-expect({
+expect(
+  ko.computed(function () {
+    return 42;
+  }),
+  'to be computed'
+);
+expect(
+  {
     foo: ko.observable(42),
     bar: ko.observable(42),
     baz: 42,
     qux: ko.computed(function () {
-        return 42;
-    })
-}, 'to have properties', {
+      return 42;
+    }),
+  },
+  'to have properties',
+  {
     foo: ko.observable(42),
     baz: 42,
     qux: ko.computed(function () {
-        return 42;
-    })
-});
+      return 42;
+    }),
+  }
+);
 ```
 
 [![Build Status](https://travis-ci.org/unexpectedjs/unexpected-knockout.svg)](https://travis-ci.org/unexpectedjs/unexpected-knockout)

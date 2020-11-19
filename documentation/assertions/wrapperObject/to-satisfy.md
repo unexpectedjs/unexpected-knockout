@@ -4,29 +4,37 @@ wrapperObject they support
 on the content of the observables:
 
 ```js
-expect(ko.observable({
+expect(
+  ko.observable({
     id: '4331241234',
     name: ko.observable('test'),
-    age: ko.observable(42)
-}), 'to satisfy', {
+    age: ko.observable(42),
+  }),
+  'to satisfy',
+  {
     id: '4331241234',
     name: 'test',
-    age: 42
-});
+    age: 42,
+  }
+);
 ```
 
 In case of a failing expectation you get the following output:
 
 ```js
-expect(ko.observable({
+expect(
+  ko.observable({
     id: '4331241234',
     name: ko.observable('test'),
     age: ko.observable(42),
-}), 'to satisfy', {
+  }),
+  'to satisfy',
+  {
     id: '4331241234',
     name: 'hest',
-    age: 41
-});
+    age: 41,
+  }
+);
 ```
 
 ```output

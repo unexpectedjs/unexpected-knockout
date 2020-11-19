@@ -1,11 +1,11 @@
 /* global ko, unexpected */
 const expect = unexpected.clone();
 
-describe('unexpected-knockout', function() {
+describe('unexpected-knockout', function () {
   expect.output.preferredWidth = 150;
 
-  describe('to equal', function() {
-    it('succeeds when the subject and the argument are observables with equal values', function() {
+  describe('to equal', function () {
+    it('succeeds when the subject and the argument are observables with equal values', function () {
       expect(ko.observable(42), 'to equal', ko.observable(42));
 
       expect(
@@ -27,51 +27,51 @@ describe('unexpected-knockout', function() {
 
       expect(
         ko.observable({
-          foo: ko.observable(42)
+          foo: ko.observable(42),
         }),
         'to equal',
         ko.observable({
-          foo: ko.observable(42)
+          foo: ko.observable(42),
         })
       );
 
       expect(
-        ko.computed(function() {
+        ko.computed(function () {
           return 42;
         }),
         'to equal',
-        ko.computed(function() {
+        ko.computed(function () {
           return 42;
         })
       );
 
       expect(
-        ko.computed(function() {
-          return ko.computed(function() {
+        ko.computed(function () {
+          return ko.computed(function () {
             return 42;
           });
         }),
         'to equal',
-        ko.computed(function() {
-          return ko.computed(function() {
+        ko.computed(function () {
+          return ko.computed(function () {
             return 42;
           });
         })
       );
     });
 
-    it('fails when the subject and the argument are not equal', function() {
+    it('fails when the subject and the argument are not equal', function () {
       expect(
-        function() {
+        function () {
           expect(
-            ko.computed(function() {
-              return ko.computed(function() {
+            ko.computed(function () {
+              return ko.computed(function () {
                 return 42;
               });
             }),
             'to equal',
-            ko.computed(function() {
-              return ko.computed(function() {
+            ko.computed(function () {
+              return ko.computed(function () {
                 return 24;
               });
             })
@@ -86,7 +86,7 @@ describe('unexpected-knockout', function() {
       );
 
       expect(
-        function() {
+        function () {
           expect(
             ko.observable(ko.observable(42)),
             'to equal',
@@ -102,14 +102,14 @@ describe('unexpected-knockout', function() {
       );
     });
 
-    it('handles circular structures', function() {
+    it('handles circular structures', function () {
       const x = ko.observable();
       x({ foo: x });
       const y = ko.observable();
       y({ foo: y });
 
       expect(
-        function() {
+        function () {
           expect(x, 'to equal', y);
         },
         'to throw',
@@ -118,8 +118,8 @@ describe('unexpected-knockout', function() {
     });
   });
 
-  describe('not to equal', function() {
-    it('succeeds when the subject and argument the are observables with values that are not equal', function() {
+  describe('not to equal', function () {
+    it('succeeds when the subject and argument the are observables with values that are not equal', function () {
       expect(ko.observable(42), 'not to equal', ko.observable(24));
       expect(
         ko.observable({ foo: 42, bar: 23 }),
@@ -130,83 +130,83 @@ describe('unexpected-knockout', function() {
 
       expect(
         ko.observable({
-          foo: ko.observable(42)
+          foo: ko.observable(42),
         }),
         'not to equal',
         ko.observable({
-          foo: ko.observable(24)
+          foo: ko.observable(24),
         })
       );
 
       expect(
         ko.observable({
-          foo: ko.observable(42)
+          foo: ko.observable(42),
         }),
         'not to equal',
         ko.observable({
-          bar: ko.observable(42)
+          bar: ko.observable(42),
         })
       );
 
       expect(
-        ko.computed(function() {
+        ko.computed(function () {
           return 42;
         }),
         'not to equal',
-        ko.computed(function() {
+        ko.computed(function () {
           return 24;
         })
       );
 
       expect(
-        ko.computed(function() {
-          return ko.computed(function() {
+        ko.computed(function () {
+          return ko.computed(function () {
             return 42;
           });
         }),
         'not to equal',
-        ko.computed(function() {
-          return ko.computed(function() {
+        ko.computed(function () {
+          return ko.computed(function () {
             return 24;
           });
         })
       );
 
       expect(
-        ko.computed(function() {
-          return ko.computed(function() {
+        ko.computed(function () {
+          return ko.computed(function () {
             return 42;
           });
         }),
         'not to equal',
-        ko.computed(function() {
-          return ko.observable(function() {
+        ko.computed(function () {
+          return ko.observable(function () {
             return 42;
           });
         })
       );
     });
 
-    it('succeeds when the subject is observable and the arguments is not observable', function() {
+    it('succeeds when the subject is observable and the arguments is not observable', function () {
       expect(ko.observable(42), 'not to equal', 24);
     });
 
-    it('succeeds when the subject is not observable and the arguments is observable', function() {
+    it('succeeds when the subject is not observable and the arguments is observable', function () {
       expect(42, 'not to equal', ko.observable(24));
     });
 
-    it('fails when the subject and the argument are equal', function() {
+    it('fails when the subject and the argument are equal', function () {
       expect(
-        function() {
+        function () {
           expect(
-            ko.computed(function() {
-              return ko.computed(function() {
+            ko.computed(function () {
+              return ko.computed(function () {
                 return 42;
               });
             }),
             'not to equal',
-            ko.computed(function() {
-              return ko.computed(function() {
+            ko.computed(function () {
+              return ko.computed(function () {
                 return 42;
               });
             })
@@ -217,7 +217,7 @@ describe('unexpected-knockout', function() {
       );
 
       expect(
-        function() {
+        function () {
           expect(
             ko.observable(ko.observable(42)),
             'not to equal',
@@ -230,27 +230,27 @@ describe('unexpected-knockout', function() {
     });
   });
 
-  describe('to have properties', function() {
-    it('succeeds if all the properties in the given object has an equal value in the subject', function() {
+  describe('to have properties', function () {
+    it('succeeds if all the properties in the given object has an equal value in the subject', function () {
       // This is just an example of how things compose
       expect(
         {
           foo: ko.observable(42),
           bar: ko.observable(42),
-          baz: 42
+          baz: 42,
         },
         'to have properties',
         {
           foo: ko.observable(42),
-          baz: 42
+          baz: 42,
         }
       );
     });
   });
 
-  it('provides custom inspection for observables', function() {
+  it('provides custom inspection for observables', function () {
     expect(
-      function() {
+      function () {
         expect(ko.observable(42), 'to equal', ko.observable(24));
       },
       'to throw',
@@ -262,23 +262,23 @@ describe('unexpected-knockout', function() {
     );
   });
 
-  describe('to be observable', function() {
-    it('succeeds if subject is a Knockout observable', function() {
+  describe('to be observable', function () {
+    it('succeeds if subject is a Knockout observable', function () {
       expect(ko.observable(42), 'to be observable');
     });
 
-    it('succeeds if the subject is a Knockout computed observables', function() {
+    it('succeeds if the subject is a Knockout computed observables', function () {
       expect(
-        ko.computed(function() {
+        ko.computed(function () {
           return 42;
         }),
         'to be observable'
       );
     });
 
-    it('fails if the subject is not a Knockout observable', function() {
+    it('fails if the subject is not a Knockout observable', function () {
       expect(
-        function() {
+        function () {
           expect(42, 'to be observable');
         },
         'to throw',
@@ -287,14 +287,14 @@ describe('unexpected-knockout', function() {
     });
   });
 
-  describe('not to be observable', function() {
-    it('succeeds if subject is not a Knockout observable', function() {
+  describe('not to be observable', function () {
+    it('succeeds if subject is not a Knockout observable', function () {
       expect(42, 'not to be observable');
     });
 
-    it('fails if the subject is a Knockout observable', function() {
+    it('fails if the subject is a Knockout observable', function () {
       expect(
-        function() {
+        function () {
           expect(ko.observable(42), 'not to be observable');
         },
         'to throw',
@@ -302,9 +302,9 @@ describe('unexpected-knockout', function() {
       );
 
       expect(
-        function() {
+        function () {
           expect(
-            ko.computed(function() {
+            ko.computed(function () {
               return 42;
             }),
             'not to be observable'
@@ -316,19 +316,19 @@ describe('unexpected-knockout', function() {
     });
   });
 
-  describe('to be computed', function() {
-    it('succeeds if subject is a Knockout computed observable', function() {
+  describe('to be computed', function () {
+    it('succeeds if subject is a Knockout computed observable', function () {
       expect(
-        ko.computed(function() {
+        ko.computed(function () {
           return 42;
         }),
         'to be computed'
       );
     });
 
-    it('fails if the subject is not a Knockout computed observable', function() {
+    it('fails if the subject is not a Knockout computed observable', function () {
       expect(
-        function() {
+        function () {
           expect(42, 'to be computed');
         },
         'to throw',
@@ -336,7 +336,7 @@ describe('unexpected-knockout', function() {
       );
 
       expect(
-        function() {
+        function () {
           expect(ko.observable(42), 'to be computed');
         },
         'to throw',
@@ -345,17 +345,17 @@ describe('unexpected-knockout', function() {
     });
   });
 
-  describe('not to be computed', function() {
-    it('succeeds if subject is not a Knockout computed observable', function() {
+  describe('not to be computed', function () {
+    it('succeeds if subject is not a Knockout computed observable', function () {
       expect(42, 'not to be computed');
       expect(ko.observable(42), 'not to be computed');
     });
 
-    it('fails if the subject is a Knockout computed observable', function() {
+    it('fails if the subject is a Knockout computed observable', function () {
       expect(
-        function() {
+        function () {
           expect(
-            ko.computed(function() {
+            ko.computed(function () {
               return 42;
             }),
             'not to be computed'

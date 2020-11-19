@@ -5,7 +5,7 @@ For more information see the documentation for
 
 ```js
 expect(ko.observable({ foo: 'f00!' }), 'to satisfy', {
-  foo: expect.it('to have length', 3)
+  foo: expect.it('to have length', 3),
 });
 ```
 

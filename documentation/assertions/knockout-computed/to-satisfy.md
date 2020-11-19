@@ -4,9 +4,13 @@ For more information see the documentation for
 [to satisfy](http://unexpectedjs.github.io/assertions/any/to-satisfy/).
 
 ```js
-expect(ko.computed(function () {
-  return { foo: 'f00!' };
-}), 'to satisfy', { foo: 'foo' });
+expect(
+  ko.computed(function () {
+    return { foo: 'f00!' };
+  }),
+  'to satisfy',
+  { foo: 'foo' }
+);
 ```
 
 ```output
