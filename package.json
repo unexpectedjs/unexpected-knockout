@@ -26,7 +26,7 @@
   "main": "./lib/unexpected-knockout.js",
   "peerDependencies": {
     "knockout": "*",
-    "unexpected": "5 || 6 || 7 || 8 || 9 || 10 || 11"
+    "unexpected": "5 || 6 || 7 || 8 || 9 || 10 || 11 || 12"
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
