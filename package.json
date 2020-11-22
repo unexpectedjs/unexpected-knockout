@@ -21,7 +21,8 @@
     "ci": "npm test && npm run lint && npm run coverage",
     "coverage": "NODE_ENV=development nyc --reporter=lcov --reporter=text --all -- npm test && echo google-chrome coverage/lcov-report/index.html",
     "generate-site": "generate-site --require ./bootstrap-unexpected-markdown.js",
-    "update-examples": "generate-site --require ./bootstrap-unexpected-markdown.js --update-examples"
+    "update-examples": "generate-site --require ./bootstrap-unexpected-markdown.js --update-examples",
+    "preversion": "offline-github-changelog --next=${npm_package_version} > CHANGELOG.md && git add CHANGELOG.md"
   },
   "main": "./lib/unexpected-knockout.js",
   "peerDependencies": {
@@ -42,6 +43,7 @@
     "minimist": "^1.2.0",
     "mocha": "^8.2.1",
     "nyc": "^15.1.0",
+    "offline-github-changelog": "^1.7.0",
     "prettier": "~2.2.0",
     "serve": "*",
     "unexpected": "^12.0.0",

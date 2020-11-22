@@ -97,3 +97,7 @@ define(['unexpected', 'unexpected-knockout'], funtion (unexpected, unexpectedKno
    // Your code
 });
 ```
+
+## Releases
+
+[Changelog](https://github.com/unexpectedjs/unexpected-knockout/blob/master/CHANGELOG.md)
