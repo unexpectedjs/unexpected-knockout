@@ -1,3 +1,18 @@
+### v6.0.0 (2022-04-28)
+
+#### Pull requests
+
+- [#122](https://github.com/unexpectedjs/unexpected-knockout/pull/122) Upgrade eslint-plugin-mocha to version 10.0.3 ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+
+#### Commits to master
+
+- [Update unexpected the dev dep to ^13.0.0, allow 13 for the peer dep](https://github.com/unexpectedjs/unexpected-knockout/commit/eae8a5efc99f4a8959c202ca2db4ca8dd6bcab0f) ([Andreas Lind](mailto:andreaslindpetersen@gmail.com))
+- [npm i --save-dev eslint-plugin-n eslint-config-standard@latest && npm uninstall eslint-plugin-node eslint-plugin-standard](https://github.com/unexpectedjs/unexpected-knockout/commit/fa48e79c4aa1a84656d50ac16c01d16849c8fcdd) ([Andreas Lind](mailto:andreas.lind@workday.com))
+- [Update eslint to ^8.13.0](https://github.com/unexpectedjs/unexpected-knockout/commit/90b09e028c40b0c00eb609be7149ac23e2c581c7) ([Andreas Lind](mailto:andreas.lind@workday.com))
+- [Update eslint-plugin-promise to version 6.0.0](https://github.com/unexpectedjs/unexpected-knockout/commit/5a530569bb9e391cd4cc1b1222ffe53688184797) ([depfu[bot]](mailto:23717796+depfu[bot]@users.noreply.github.com))
+- [Fix eslint-plugin-prettier usage](https://github.com/unexpectedjs/unexpected-knockout/commit/af2ccf878bc4295b190b6592f9ab35b31bcf7863) ([Andreas Lind](mailto:andreas.lind@workday.com))
+- [+6 more](https://github.com/unexpectedjs/unexpected-knockout/compare/v6.0.0...v6.0.0)
+
 ### v6.0.0 (2020-11-20)
 
 #### Pull requests
