@@ -42,7 +42,7 @@
     "minimist": "^1.2.0",
     "mocha": "^8.2.1",
     "nyc": "^15.1.0",
-    "offline-github-changelog": "^1.7.0",
+    "offline-github-changelog": "^2.4.0",
     "prettier": "~2.5.1",
     "serve": "*",
     "unexpected": "^13.0.0",
