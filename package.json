@@ -47,7 +47,7 @@
     "serve": "*",
     "unexpected": "^13.0.0",
     "unexpected-documentation-site-generator": "^6.0.0",
-    "unexpected-markdown": "^4.0.0"
+    "unexpected-markdown": "^6.0.1"
   },
   "nyc": {
     "include": [
